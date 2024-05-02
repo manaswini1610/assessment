@@ -1,0 +1,53 @@
+
+.Scrolling-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.Scrolling-content {
+    text-align: center;
+    top: 5%;
+    transform: translateY(-30%);
+ 
+    margin-bottom:0rem;
+}
+
+.Scrolling-content h1 {
+    font-size: 70px;
+    margin: 5px;
+}
+
+.Scrolling-video {
+    width: 70%;
+    position: absolute;
+    top: 0;
+    transition: top 0.3s ease;
+    z-index: 2;
+}
+
+.Scrolling-video video {
+    display: block;
+    width: 100%;
+}
+
+.fast {
+    color: #188038;
+    background-color: #CEEAD6;
+    border-radius: 50px;
+    justify-items: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+} 
+
+
+
+
+
+
+

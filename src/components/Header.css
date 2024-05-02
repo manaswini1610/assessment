@@ -1,0 +1,116 @@
+.header {
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 10px;
+}
+
+.header-text,
+.header-text2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+.header-text p{
+    width: 30rem;
+    font-size: 14px;
+    color: rgb(99, 98, 98);
+}
+.header-text a,
+.header-text2 a{
+    text-decoration: none;
+    color:#1967D2;
+}
+.header-text2 p {
+    font-size: 13px;
+    color: rgb(108, 108, 108);
+}
+
+
+
+.scrolling-text {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.gap {
+    height: 20px; 
+}
+
+.custom-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+  
+}
+.header-text2 p{
+    width: 28rem;
+}
+.heading,
+.heading-2{
+    font-size: 40px;
+    
+}
+.heading h1,.heading-2 h1{
+    margin: 5px;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    z-index: 1000;
+    display: none; 
+    border-radius: 35px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.navigation.show {
+    display: block; 
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation ul li {
+    margin: 0 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navigation ul li:hover {
+    background-color: #f9f7f7;
+    border-radius: 10px;
+}
+.downloadbtn{
+    background-color: blue;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+}
+
