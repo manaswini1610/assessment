@@ -6,19 +6,22 @@
     overflow: hidden;
     position: relative;
     flex-direction: column;
-    height: 100vh;
+    height: 120vh;
 }
 
 .Scrolling-content {
     text-align: center;
     top: 5%;
     transform: translateY(-30%);
- 
-    margin-bottom:0rem;
+    margin-bottom: 0rem;
+    position: relative; 
+    margin-top: 5rem;
+
 }
 
 .Scrolling-content h1 {
     font-size: 70px;
+    padding-top: 30px;
     margin: 5px;
 }
 
@@ -43,11 +46,10 @@
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
-} 
+}
 
-
-
-
-
-
-
+.Scrolling-video.position-static {
+    position: relative;
+    margin: auto;
+    top: auto;
+}
