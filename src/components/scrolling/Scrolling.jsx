@@ -53,7 +53,7 @@ const Scrolling = () => {
             </div>
 
             <div className="Scrolling-video">
-                <video autoPlay loop muted width="500">
+                <video autoPlay loop muted width="500" style={{borderRadius:'30px'}}>
                     <source src={video} type="video/mp4" />
                 </video>
                 
