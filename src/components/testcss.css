@@ -1,0 +1,42 @@
+.Scrolling-video {
+    position: relative;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+    display: none; /* Default to not show */
+}
+
+.Scrolling-container.scroll-option .carousel .image-container {
+    display: block; /* Show when the video section is scrolled into view */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}

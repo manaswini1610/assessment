@@ -1,9 +1,9 @@
 
-
 import './App.css'
-import Header from './components/Header'
-import Navbar from './components/Navbar'
-import Scrolling from './components/Scrolling'
+import Header from './components/header/Header'
+import Nav from './components/Nav/Nav'
+import Scrolling from './components/scrolling/Scrolling'
+
 
 
 function App() {
@@ -11,11 +11,9 @@ function App() {
 
   return (
     <>
- 
-    <Navbar/>
+    <Nav/>
     <Header/>
     <Scrolling/>
-  
     </>
   )
 }

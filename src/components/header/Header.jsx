@@ -1,10 +1,14 @@
-
 import React, { useState, useEffect } from 'react';
-import logo from '../assets/logo.svg';
+import logo from '../../assets/logo.svg';
+
 import './Header.css';
+import { MdOutlineSpeed, MdOutlineHealthAndSafety } from "react-icons/md";
+import { FaPaintRoller } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 const Header = () => {
     const [showNav, setShowNav] = useState(false);
+    const [currentText, setCurrentText] = useState('fast');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,6 +25,59 @@ const Header = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentText(prev => {
+                if (prev === 'fast') return 'secure';
+                if (prev === 'secure') return 'safe';
+                return 'fast';
+            });
+        }, 3000); // Change text every 3 seconds
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const getTextStyle = () => {
+        switch (currentText) {
+            case 'fast':
+                return { color: 'green' };
+            case 'secure':
+                return { color: 'red' };
+            case 'safe':
+                return { color: 'blue' };
+            default:
+                return {};
+        }
+    };
+
+    const getDivStyles = () => {
+        switch (currentText) {
+            case 'fast':
+                return { background: 'rgba(49, 245, 104, 0.56)' };
+            case 'secure':
+                return { background: 'rgba(245, 75, 49, 0.56)' };
+            case 'safe':
+                return { background: 'rgba(49, 129, 245, 0.56)' };
+            default:
+                return {};
+        }
+    };
+
+    const getIcons = () => {
+        switch (currentText) {
+            case 'fast':
+                return { color: 'green', logos: <MdOutlineSpeed /> };
+            case 'secure':
+                return { color: 'red', logos: <MdOutlineHealthAndSafety /> };
+            case 'safe':
+                return { color: 'blue', logos: <FaPaintRoller /> };
+            default:
+                return { color: 'black', logos: null }; // Fallback icon and color
+        }
+    };
+
+    const { color, logos } = getIcons();
 
     return (
         <div className="header">
@@ -40,7 +97,15 @@ const Header = () => {
                 <h1>The browser</h1>
             </div>
             <div className="heading-2">
-                <h1>built to be yours</h1>
+                <h1>built to be</h1>
+                <div className='icon-container' style={{ position: 'relative', width: '200px', height: '70px', overflow: 'hidden', borderRadius: '100px', display:'flex', alignItems:'center', justifyContent:'center',gap:'10px',...getDivStyles()}}>
+                    <IconContext.Provider value={{ color }}>
+                        {logos}
+                    </IconContext.Provider>
+                    <div style={{ position: 'absolute', width: 'fit-content', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <span style={getTextStyle()}>{currentText}</span>
+                    </div>
+                </div>
             </div>
             <button className="button">Download Chrome</button>
             <div className="gap"></div>
@@ -78,7 +143,6 @@ const Header = () => {
                     </a>
                 </p>
             </div>
-
         </div>
     );
 };

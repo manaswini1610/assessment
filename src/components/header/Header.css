@@ -1,5 +1,6 @@
 .header {
     text-align: center;
+    margin-top: 60px;
 }
 
 .logo {
@@ -45,6 +46,10 @@
     font-size: 16px;
     cursor: pointer;
 }
+.icon-container div{ 
+    position: static !important;
+    
+}
 
 .gap {
     height: 20px; 
@@ -60,8 +65,15 @@
 .header-text2 p{
     width: 28rem;
 }
-.heading,
+.heading{
+    font-size: 40px;
+}
 .heading-2{
+    display: flex;
+    width: 100%;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
     font-size: 40px;
     
 }
